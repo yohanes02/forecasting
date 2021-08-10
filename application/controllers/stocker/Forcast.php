@@ -99,6 +99,18 @@ class Forcast extends CI_Controller
             $d12 = $q12->row()->aktual;
             $d['ak12'] = $d12;
 
+            $q13 = $this->db->query("SELECT SUM(IF(month(tgl_keluar)='1' and year(tgl_keluar)='2022', `qty_keluar`,0)) AS aktual from pengeluaran where kode = '$kode'");
+            $d13 = $q13->row()->aktual;
+            $d['ak13'] = $d13;
+
+            $q14 = $this->db->query("SELECT SUM(IF(month(tgl_keluar)='2' and year(tgl_keluar)='2022', `qty_keluar`,0)) AS aktual from pengeluaran where kode = '$kode'");
+            $d14 = $q14->row()->aktual;
+            $d['ak14'] = $d14;
+
+            $q15 = $this->db->query("SELECT SUM(IF(month(tgl_keluar)='3' and year(tgl_keluar)='2022', `qty_keluar`,0)) AS aktual from pengeluaran where kode = '$kode'");
+            $d15 = $q15->row()->aktual;
+            $d['ak15'] = $d15;
+
             $this->load->view('stocker/forcast/ramal', $d);
         } else {
             redirect('auth/logout');

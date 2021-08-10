@@ -36,7 +36,8 @@ $this->load->view('tema/sidebar');
                             <label for="nm_barang" class="col-sm-2 control-label">Bulan </label>
                             <?php
                             $a = date('m');
-                            $bln = $a + 1;
+                            // $bln = $a + 1;
+                            $bln = $a;
                             $tahun = date('Y');
                             ?>
                             <div class="col-sm-5">

@@ -39,7 +39,7 @@ $this->load->view('tema/sidebar');
                         <div class="form-group">
                             <label for="tgl" class="col-sm-2 control-label">Tanggal</label>
                             <div class="col-sm-10">
-                                <input type="date" class="form-control" name="tgl" value="<?= date("Y-m-d"); ?>" required>
+                                <input type="date" class="form-control" name="tgl" value="<?= date("Y-m-d"); ?>" min="<?= date("Y-m-d"); ?>" required>
                             </div>
                         </div>
                         <div class="form-group">

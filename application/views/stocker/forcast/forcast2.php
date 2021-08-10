@@ -4,7 +4,7 @@ $n = $this->session->userdata('bul');
 $tahun = $this->session->userdata('tahun');
 $kode = $this->session->userdata('kode');
 
-$n = date('m')-1;
+// $n = date('m');
 
 $alpa1 = 0.1;
 $alpa2 = 0.2;
@@ -17,7 +17,7 @@ $alpa8 = 0.8;
 $alpa9 = 0.9;
 
 
-$a1 = $a1 = $ak1; //nilai aktual 1
+$a1 = $ak1; //nilai aktual 1
 $ft1 = $a1;
 $E1 = 0;
 $M1 = abs($E1);
@@ -33,6 +33,9 @@ $a9 = $ak9; //nilai aktual 9
 $a10 = $ak10;
 $a11 = $ak11;
 $a12 = $ak12;
+$a13 = $ak13;
+$a14 = $ak14;
+$a15 = $ak15;
 
 //forcast 2,3,4,5,6,7,8,9  =====================================> Alpha 0.1
 
@@ -76,6 +79,22 @@ $ft11a = $ft10a + $alpa1 * ($a10 - $ft10a); // 9
 $E11a = $a11 - $ft11a;
 $M11a = abs($E11a);
 
+$ft12a = $ft11a + $alpa1 * ($a11 - $ft11a); // 9
+$E12a = $a12 - $ft12a;
+$M12a = abs($E12a);
+
+$ft13a = $ft12a + $alpa1 * ($a12 - $ft12a); // 9
+$E13a = $a13 - $ft13a;
+$M13a = abs($E13a);
+
+$ft14a = $ft13a + $alpa1 * ($a13 - $ft13a); // 9
+$E14a = $a14 - $ft14a;
+$M14a = abs($E14a);
+
+$ft15a = $ft14a + $alpa1 * ($a14 - $ft14a); // 9
+$E15a = $a15 - $ft15a;
+$M15a = abs($E15a);
+
 
 //forcast 2,3,4,5,6,7,8,9 =====================================> Alpha 0.2
 
@@ -117,7 +136,23 @@ $M10b = abs($E10b);
 
 $ft11b = $ft10b + $alpa2 * ($a10 - $ft10b); // 9
 $E11b = $a11 - $ft11b;
-$M11b = abs($E10b);
+$M11b = abs($E11b);
+
+$ft12b = $ft11b + $alpa2 * ($a11 - $ft11b); // 9
+$E12b = $a12 - $ft12b;
+$M12b = abs($E12b);
+
+$ft13b = $ft12b + $alpa2 * ($a12 - $ft12b); // 9
+$E13b = $a13 - $ft13b;
+$M13b = abs($E13b);
+
+$ft14b = $ft13b + $alpa2 * ($a13 - $ft13b); // 9
+$E14b = $a14 - $ft14b;
+$M14b = abs($E14b);
+
+$ft15b = $ft14b + $alpa2 * ($a14 - $ft14b); // 9
+$E15b = $a15 - $ft15b;
+$M15b = abs($E15b);
 
 //forcast 2,3,4,5,6,7,8,9 =====================================> Alpha 0.3
 $ft2c = $ft1 + $alpa3 * ($a1 - $ft1); // 2
@@ -160,6 +195,22 @@ $ft11c = $ft10c + $alpa3 * ($a10 - $ft10c); // 9
 $E11c = $a11 - $ft11c;
 $M11c = abs($E11c);
 
+$ft12c = $ft11c + $alpa3 * ($a11 - $ft11c); // 9
+$E12c = $a12 - $ft12c;
+$M12c = abs($E12c);
+
+$ft13c = $ft12c + $alpa3 * ($a12 - $ft12c); // 9
+$E13c = $a13 - $ft13c;
+$M13c = abs($E13c);
+
+$ft14c = $ft13c + $alpa3 * ($a13 - $ft13c); // 9
+$E14c = $a14 - $ft14c;
+$M14c = abs($E14c);
+
+$ft15c = $ft14c + $alpa3 * ($a14 - $ft14c); // 9
+$E15c = $a15 - $ft15c;
+$M15c = abs($E15c);
+
 //forcast 2,3,4,5,6,7,8,9 =====================================> Alpha 0.4
 $ft2d = $ft1 + $alpa4 * ($a1 - $ft1); // 2
 $E2d = $a2 - $ft2d;
@@ -200,6 +251,22 @@ $M10d = abs($E10d);
 $ft11d = $ft10d + $alpa4 * ($a10 - $ft10d); // 11
 $E11d = $a11 - $ft11d;
 $M11d = abs($E11d);
+
+$ft12d = $ft11d + $alpa4 * ($a11 - $ft11d); // 12
+$E12d = $a12 - $ft12d;
+$M12d = abs($E12d);
+
+$ft13d = $ft12d + $alpa4 * ($a12 - $ft12d); // 13
+$E13d = $a13 - $ft13d;
+$M13d = abs($E13d);
+
+$ft14d = $ft13d + $alpa4 * ($a13 - $ft13d); // 14
+$E14d = $a14 - $ft14d;
+$M14d = abs($E14d);
+
+$ft15d = $ft14d + $alpa4 * ($a14 - $ft14d); // 15
+$E15d = $a15 - $ft15d;
+$M15d = abs($E15d);
 
 //forcast 2,3,4,5,6,7,8,9 =====================================> Alpha 0.5
 $ft2e = $ft1 + $alpa5 * ($a1 - $ft1); // 2
@@ -242,6 +309,22 @@ $ft11e = $ft10e + $alpa5 * ($a10 - $ft10e); // 11
 $E11e = $a11 - $ft11e;
 $M11e = abs($E11e);
 
+$ft12e = $ft11e + $alpa5 * ($a11 - $ft11e); // 12
+$E12e = $a12 - $ft12e;
+$M12e = abs($E12e);
+
+$ft13e = $ft12e + $alpa5 * ($a12 - $ft12e); // 13
+$E13e = $a13 - $ft13e;
+$M13e = abs($E13e);
+
+$ft14e = $ft13e + $alpa5 * ($a13 - $ft13e); // 14
+$E14e = $a14 - $ft14e;
+$M14e = abs($E14e);
+
+$ft15e = $ft14e + $alpa5 * ($a14 - $ft14e); // 15
+$E15e = $a15 - $ft15e;
+$M15e = abs($E15e);
+
 //forcast 2,3,4,5,6,7,8,9 =====================================> Alpha 0.6
 $ft2f = $ft1 + $alpa6 * ($a1 - $ft1); // 2
 $E2f = $a2 - $ft2f;
@@ -282,6 +365,22 @@ $M10f = abs($E10f);
 $ft11f = $ft10f + $alpa6 * ($a10 - $ft10f); // 11
 $E11f = $a11 - $ft11f;
 $M11f = abs($E11f);
+
+$ft12f = $ft11f + $alpa6 * ($a11 - $ft11f); // 12
+$E12f = $a12 - $ft12f;
+$M12f = abs($E12f);
+
+$ft13f = $ft12f + $alpa6 * ($a12 - $ft12f); // 13
+$E13f = $a13 - $ft13f;
+$M13f = abs($E13f);
+
+$ft14f = $ft13f + $alpa6 * ($a13 - $ft13f); // 14
+$E14f = $a14 - $ft14f;
+$M14f = abs($E14f);
+
+$ft15f = $ft14f + $alpa6 * ($a14 - $ft14f); // 15
+$E15f = $a15 - $ft15f;
+$M15f = abs($E15f);
 
 //forcast 2,3,4,5,6,7,8,9 ====================================> Alpha 0.7
 $ft2g = $ft1 + $alpa7 * ($a1 - $ft1); // 2
@@ -324,6 +423,22 @@ $ft11g = $ft10g + $alpa7 * ($a10 - $ft10g); // 11
 $E11g = $a11 - $ft11g;
 $M11g = abs($E11g);
 
+$ft12g = $ft11g + $alpa7 * ($a11 - $ft11g); // 12
+$E12g = $a12 - $ft12g;
+$M12g = abs($E12g);
+
+$ft13g = $ft12g + $alpa7 * ($a12 - $ft12g); // 13
+$E13g = $a13 - $ft13g;
+$M13g = abs($E13g);
+
+$ft14g = $ft13g + $alpa7 * ($a13 - $ft13g); // 14
+$E14g = $a14 - $ft14g;
+$M14g = abs($E14g);
+
+$ft15g = $ft14g + $alpa7 * ($a14 - $ft14g); // 15
+$E15g = $a15 - $ft15g;
+$M15g = abs($E15g);
+
 //forcast 2,3,4,5,6,7,8,9 =====================================> Alpha 0.8
 $ft2h = $ft1 + $alpa8 * ($a1 - $ft1); // 2
 $E2h = $a2 - $ft2h;
@@ -364,6 +479,22 @@ $M10h = abs($E10h);
 $ft11h = $ft10h + $alpa8 * ($a10 - $ft10h); // 11
 $E11h = $a11 - $ft11h;
 $M11h = abs($E11h);
+
+$ft12h = $ft11h + $alpa8 * ($a11 - $ft11h); // 12
+$E12h = $a12 - $ft12h;
+$M12h = abs($E12h);
+
+$ft13h = $ft12h + $alpa8 * ($a12 - $ft12h); // 13
+$E13h = $a13 - $ft13h;
+$M13h = abs($E13h);
+
+$ft14h = $ft13h + $alpa8 * ($a13 - $ft13h); // 14
+$E14h = $a14 - $ft14h;
+$M14h = abs($E14h);
+
+$ft15h = $ft14h + $alpa8 * ($a14 - $ft14h); // 15
+$E15h = $a15 - $ft15h;
+$M15h = abs($E15h);
 
 //forcast 2,3,4,5,6,7,8,9 =====================================> Alpha 0.9
 $ft2i = $ft1 + $alpa9 * ($a1 - $ft1); // 2
@@ -406,6 +537,22 @@ $ft11i = $ft10i + $alpa9 * ($a10 - $ft10i); // 11
 $E11i = $a11 - $ft11i;
 $M11i = abs($E11i);
 
+$ft12i = $ft11i + $alpa9 * ($a11 - $ft11i); // 12
+$E12i = $a12 - $ft12i;
+$M12i = abs($E12i);
+
+$ft13i = $ft12i + $alpa9 * ($a12 - $ft12i); // 13
+$E13i = $a13 - $ft13i;
+$M13i = abs($E13i);
+
+$ft14i = $ft13i + $alpa9 * ($a13 - $ft13i); // 14
+$E14i = $a14 - $ft14i;
+$M14i = abs($E14i);
+
+$ft15i = $ft14i + $alpa9 * ($a14 - $ft14i); // 15
+$E15i = $a15 - $ft15i;
+$M15i = abs($E15i);
+
 //cari forcast 9 dengan EROR terkecil
 // $MAE01 = ($M1 + $M2a + $M3a + $M4a + $M5a + $M6a + $M7a + $M8a) / 8;
 // $MAE02 = ($M1 + $M2b + $M3b + $M4b + $M5b + $M6b + $M7b + $M8b) / 8;
@@ -417,15 +564,15 @@ $M11i = abs($E11i);
 // $MAE08 = ($M1 + $M2h + $M3h + $M4h + $M5h + $M6h + $M7h + $M8h) / 8;
 // $MAE09 = ($M1 + $M2i + $M3i + $M4i + $M5i + $M6i + $M7i + $M8i) / 8;
 
-$MAE01 = ($M1 + $M2a + $M3a + $M4a + $M5a + $M6a + $M7a + $M8a + $M9a + $M10a) / 10;
-$MAE02 = ($M1 + $M2b + $M3b + $M4b + $M5b + $M6b + $M7b + $M8b + $M9b + $M10b) / 10;
-$MAE03 = ($M1 + $M2c + $M3c + $M4c + $M5c + $M6c + $M7c + $M8c + $M9c + $M10c) / 10;
-$MAE04 = ($M1 + $M2d + $M3d + $M4d + $M5d + $M6d + $M7d + $M8d + $M9d + $M10d) / 10;
-$MAE05 = ($M1 + $M2e + $M3e + $M4e + $M5e + $M6e + $M7e + $M8e + $M9e + $M10e) / 10;
-$MAE06 = ($M1 + $M2f + $M3f + $M4f + $M5f + $M6f + $M7f + $M8f + $M9f + $M10f) / 10;
-$MAE07 = ($M1 + $M2g + $M3g + $M4g + $M5g + $M6g + $M7g + $M8g + $M9g + $M10g) / 10;
-$MAE08 = ($M1 + $M2h + $M3h + $M4h + $M5h + $M6h + $M7h + $M8h + $M9h + $M10h) / 10;
-$MAE09 = ($M1 + $M2i + $M3i + $M4i + $M5i + $M6i + $M7i + $M8i + $M9i + $M10i) / 10;
+$MAE01 = ($M1 + $M2a + $M3a + $M4a + $M5a + $M6a + $M7a + $M8a + $M9a + $M10a + $M11a + $M12a + $M13a + $M14a) / 14;
+$MAE02 = ($M1 + $M2b + $M3b + $M4b + $M5b + $M6b + $M7b + $M8b + $M9b + $M10b + $M11b + $M12b + $M13b + $M14b) / 14;
+$MAE03 = ($M1 + $M2c + $M3c + $M4c + $M5c + $M6c + $M7c + $M8c + $M9c + $M10c + $M11c + $M12c + $M13c + $M14c) / 14;
+$MAE04 = ($M1 + $M2d + $M3d + $M4d + $M5d + $M6d + $M7d + $M8d + $M9d + $M10d + $M11d + $M12d + $M13d + $M14d) / 14;
+$MAE05 = ($M1 + $M2e + $M3e + $M4e + $M5e + $M6e + $M7e + $M8e + $M9e + $M10e + $M11e + $M12e + $M13e + $M14e) / 14;
+$MAE06 = ($M1 + $M2f + $M3f + $M4f + $M5f + $M6f + $M7f + $M8f + $M9f + $M10f + $M11f + $M12f + $M13f + $M14f) / 14;
+$MAE07 = ($M1 + $M2g + $M3g + $M4g + $M5g + $M6g + $M7g + $M8g + $M9g + $M10g + $M11g + $M12g + $M13g + $M14g) / 14;
+$MAE08 = ($M1 + $M2h + $M3h + $M4h + $M5h + $M6h + $M7h + $M8h + $M9h + $M10h + $M11h + $M12h + $M13h + $M14h) / 14;
+$MAE09 = ($M1 + $M2i + $M3i + $M4i + $M5i + $M6i + $M7i + $M8i + $M9i + $M10i + $M11i + $M12i + $M13i + $M14i) / 14;
 
 $allMae = array($MAE01, $MAE02, $MAE03, $MAE04, $MAE05, $MAE06, $MAE07, $MAE08, $MAE09);
 
@@ -479,6 +626,22 @@ if ($cari == $MAE01) {
 	$ft11 = $ft11a;
 	$e11 = $E11a;
 	$m11 = $M11a;
+
+	$ft12 = $ft12a;
+	$e12 = $E12a;
+	$m12 = $M12a;
+
+	$ft13 = $ft13a;
+	$e13 = $E13a;
+	$m13 = $M13a;
+
+	$ft14 = $ft14a;
+	$e14 = $E14a;
+	$m14 = $M14a;
+
+	$ft15 = $ft15a;
+	$e15 = $E15a;
+	$m15 = $M15a;
 } else if ($cari == $MAE02) {
 	//forcast2
 	$alpa = $alpa2;
@@ -528,6 +691,22 @@ if ($cari == $MAE01) {
 	$ft11 = $ft11b;
 	$e11 = $E11b;
 	$m11 = $M11b;
+
+	$ft12 = $ft12b;
+	$e12 = $E12b;
+	$m12 = $M12b;
+
+	$ft13 = $ft13b;
+	$e13 = $E13b;
+	$m13 = $M13b;
+
+	$ft14 = $ft14b;
+	$e14 = $E14b;
+	$m14 = $M14b;
+
+	$ft15 = $ft15b;
+	$e15 = $E15b;
+	$m15 = $M15b;
 } else if ($cari == $MAE03) {
 	//forcast2
 	$alpa = $alpa3;
@@ -577,6 +756,22 @@ if ($cari == $MAE01) {
 	$ft11 = $ft11c;
 	$e11 = $E11c;
 	$m11 = $M11c;
+
+	$ft12 = $ft12c;
+	$e12 = $E12c;
+	$m12 = $M12c;
+
+	$ft13 = $ft13c;
+	$e13 = $E13c;
+	$m13 = $M13c;
+
+	$ft14 = $ft14c;
+	$e14 = $E14c;
+	$m14 = $M14c;
+
+	$ft15 = $ft15c;
+	$e15 = $E15c;
+	$m15 = $M15c;
 } else if ($cari == $MAE04) {
 	//forcast2
 	$alpa = $alpa4;
@@ -626,6 +821,22 @@ if ($cari == $MAE01) {
 	$ft11 = $ft11d;
 	$e11 = $E11d;
 	$m11 = $M11d;
+
+	$ft12 = $ft12d;
+	$e12 = $E12d;
+	$m12 = $M12d;
+
+	$ft13 = $ft13d;
+	$e13 = $E13d;
+	$m13 = $M13d;
+
+	$ft14 = $ft14d;
+	$e14 = $E14d;
+	$m14 = $M14d;
+
+	$ft15 = $ft15d;
+	$e15 = $E15d;
+	$m15 = $M15d;
 } else if ($cari == $MAE05) {
 	//forcast2
 	$alpa = $alpa5;
@@ -675,6 +886,22 @@ if ($cari == $MAE01) {
 	$ft11 = $ft11e;
 	$e11 = $E11e;
 	$m11 = $M11e;
+
+	$ft12 = $ft12e;
+	$e12 = $E12e;
+	$m12 = $M12e;
+
+	$ft13 = $ft13e;
+	$e13 = $E13e;
+	$m13 = $M13e;
+
+	$ft14 = $ft14e;
+	$e14 = $E14e;
+	$m14 = $M14e;
+
+	$ft15 = $ft15e;
+	$e15 = $E15e;
+	$m15 = $M15e;
 } else if ($cari == $MAE06) {
 	//forcast2
 	$alpa = $alpa6;
@@ -724,6 +951,22 @@ if ($cari == $MAE01) {
 	$ft11 = $ft11f;
 	$e11 = $E11f;
 	$m11 = $M11f;
+
+	$ft12 = $ft12f;
+	$e12 = $E12f;
+	$m12 = $M12f;
+
+	$ft13 = $ft13f;
+	$e13 = $E13f;
+	$m13 = $M13f;
+
+	$ft14 = $ft14f;
+	$e14 = $E14f;
+	$m14 = $M14f;
+
+	$ft15 = $ft15f;
+	$e15 = $E15f;
+	$m15 = $M15f;
 } else if ($cari == $MAE07) {
 	//forcast2
 	$alpa = $alpa7;
@@ -773,6 +1016,22 @@ if ($cari == $MAE01) {
 	$ft11 = $ft11g;
 	$e11 = $E11g;
 	$m11 = $M11g;
+
+	$ft12 = $ft12g;
+	$e12 = $E12g;
+	$m12 = $M12g;
+
+	$ft13 = $ft13g;
+	$e13 = $E13g;
+	$m13 = $M13g;
+
+	$ft14 = $ft14g;
+	$e14 = $E14g;
+	$m14 = $M14g;
+
+	$ft15 = $ft15g;
+	$e15 = $E15g;
+	$m15 = $M15g;
 } else if ($cari == $MAE08) {
 	//forcast2
 	$alpa = $alpa8;
@@ -822,6 +1081,22 @@ if ($cari == $MAE01) {
 	$ft11 = $ft11h;
 	$e11 = $E11h;
 	$m11 = $M11h;
+
+	$ft12 = $ft12h;
+	$e12 = $E12h;
+	$m12 = $M12h;
+
+	$ft13 = $ft13h;
+	$e13 = $E13h;
+	$m13 = $M13h;
+
+	$ft14 = $ft14h;
+	$e14 = $E14h;
+	$m14 = $M14h;
+
+	$ft15 = $ft15h;
+	$e15 = $E15h;
+	$m15 = $M15h;
 } else if ($cari == $MAE09) {
 	//forcast2
 	$alpa = $alpa9;
@@ -871,4 +1146,20 @@ if ($cari == $MAE01) {
 	$ft11 = $ft11i;
 	$e11 = $E11i;
 	$m11 = $M11i;
+
+	$ft12 = $ft12i;
+	$e12 = $E12i;
+	$m12 = $M12i;
+
+	$ft13 = $ft13i;
+	$e13 = $E13i;
+	$m13 = $M13i;
+
+	$ft14 = $ft14i;
+	$e14 = $E14i;
+	$m14 = $M14i;
+
+	$ft15= $ft15i;
+	$e15= $E15i;
+	$m15= $M15i;
 }
